@@ -29,7 +29,6 @@ public class AddContactGUI extends javax.swing.JFrame {
 
         image1 = new javax.swing.JLabel();
         titile1Label = new javax.swing.JLabel();
-        search = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
         add = new javax.swing.JButton();
         goBack = new javax.swing.JButton();
@@ -48,10 +47,7 @@ public class AddContactGUI extends javax.swing.JFrame {
         titile1Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titile1Label.setText("DSDRisk Game");
         getContentPane().add(titile1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 60));
-
-        search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/buscarIcono.png"))); // NOI18N
-        getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
-        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 250, 30));
+        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 250, 30));
 
         add.setText("Add");
         add.addActionListener(new java.awt.event.ActionListener() {
@@ -98,7 +94,6 @@ public class AddContactGUI extends javax.swing.JFrame {
     private javax.swing.JButton goBack;
     private javax.swing.JLabel image1;
     private javax.swing.JLabel imageBackground;
-    private javax.swing.JLabel search;
     private javax.swing.JLabel titile1Label;
     private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables

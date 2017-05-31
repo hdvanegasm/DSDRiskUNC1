@@ -31,11 +31,11 @@ public class DeleteContactGUI extends javax.swing.JFrame {
 
         title1Label = new javax.swing.JLabel();
         image1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        contactTable = new javax.swing.JPanel();
         title2Label = new javax.swing.JLabel();
         deleteContact = new javax.swing.JButton();
         goBack = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         aboutLabel = new javax.swing.JLabel();
         imageBackground = new javax.swing.JLabel();
 
@@ -52,11 +52,6 @@ public class DeleteContactGUI extends javax.swing.JFrame {
         image1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Warriors.jpg"))); // NOI18N
         getContentPane().add(image1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 220, 110));
 
-        contactTable.setLayout(new java.awt.GridLayout(1, 0));
-        jScrollPane1.setViewportView(contactTable);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 202, 377, 80));
-
         title2Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title2Label.setText("Choose contact to remove");
         getContentPane().add(title2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 182, 377, -1));
@@ -67,7 +62,7 @@ public class DeleteContactGUI extends javax.swing.JFrame {
                 deleteContactActionPerformed(evt);
             }
         });
-        getContentPane().add(deleteContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, -1, -1));
+        getContentPane().add(deleteContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, -1, -1));
 
         goBack.setText("Go back");
         goBack.addActionListener(new java.awt.event.ActionListener() {
@@ -75,11 +70,26 @@ public class DeleteContactGUI extends javax.swing.JFrame {
                 goBackActionPerformed(evt);
             }
         });
-        getContentPane().add(goBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 103, -1));
+        getContentPane().add(goBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 103, -1));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null},
+                {null},
+                {null},
+                {null}
+            },
+            new String [] {
+                "Conctact username"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 160, 90));
 
         aboutLabel.setForeground(new java.awt.Color(0, 0, 204));
         aboutLabel.setText("About this game");
-        getContentPane().add(aboutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, -1, -1));
+        getContentPane().add(aboutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, -1, -1));
 
         imageBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/background.jpg"))); // NOI18N
         getContentPane().add(imageBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 350));
@@ -103,12 +113,12 @@ public class DeleteContactGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel aboutLabel;
-    private javax.swing.JPanel contactTable;
     private javax.swing.JButton deleteContact;
     private javax.swing.JButton goBack;
     private javax.swing.JLabel image1;
     private javax.swing.JLabel imageBackground;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel title1Label;
     private javax.swing.JLabel title2Label;
     // End of variables declaration//GEN-END:variables

@@ -38,25 +38,18 @@ public class InitialSetupGUI extends javax.swing.JFrame {
         chooseMapLabel = new javax.swing.JLabel();
         typeOfGame = new javax.swing.JComboBox<>();
         typeOfGameLabel = new javax.swing.JLabel();
-        numberOfPlayersLabel = new javax.swing.JLabel();
-        userTable = new javax.swing.JScrollPane();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
         leaveSession = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         aboutLabel = new javax.swing.JLabel();
-        numberOfPlayers = new javax.swing.JSpinner();
         imageBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        chooseMap.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        chooseMap.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Classic" }));
         chooseMap.setEnabled(false);
-        getContentPane().add(chooseMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 113, 120, -1));
+        getContentPane().add(chooseMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 113, 130, -1));
 
         title2Label.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         title2Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -74,73 +67,50 @@ public class InitialSetupGUI extends javax.swing.JFrame {
         chooseMapLabel.setText("Choose map");
         getContentPane().add(chooseMapLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 116, 90, -1));
 
-        typeOfGame.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        typeOfGame.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "World domination risk", "Secret Mission Risk", "Capital Risk", "Risk for 2 players" }));
         typeOfGame.setEnabled(false);
-        getContentPane().add(typeOfGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 144, 120, -1));
+        getContentPane().add(typeOfGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 144, 130, -1));
 
         typeOfGameLabel.setText("Type of game");
         getContentPane().add(typeOfGameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 147, 90, -1));
 
-        numberOfPlayersLabel.setText("Numbers of players");
-        getContentPane().add(numberOfPlayersLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 182, 121, -1));
-
-        jPanel1.setLayout(new java.awt.BorderLayout());
-
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel8.setText("Username");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, -1));
-
-        jLabel9.setText("Color");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 80, -1));
-
-        jPanel1.add(jPanel2, java.awt.BorderLayout.PAGE_START);
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 124, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(jPanel3, java.awt.BorderLayout.LINE_END);
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 114, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 124, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(jPanel4, java.awt.BorderLayout.CENTER);
-
-        userTable.setViewportView(jPanel1);
-
-        getContentPane().add(userTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 202, 157));
-
         leaveSession.setText("Leave session");
-        getContentPane().add(leaveSession, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, -1, -1));
+        leaveSession.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leaveSessionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(leaveSession, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, -1, -1));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Username", "Color"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 170, 140));
 
         aboutLabel.setForeground(new java.awt.Color(0, 0, 204));
         aboutLabel.setText("About this game");
-        getContentPane().add(aboutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, -1, -1));
-
-        numberOfPlayers.setEnabled(false);
-        getContentPane().add(numberOfPlayers, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 60, -1));
+        getContentPane().add(aboutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, -1, -1));
 
         imageBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/background700400.jpg"))); // NOI18N
-        getContentPane().add(imageBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -6, 500, 320));
+        getContentPane().add(imageBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -6, 560, 270));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void leaveSessionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leaveSessionActionPerformed
+        this.setVisible(false);
+        new SessionGUI(this.user).setVisible(true);
+    }//GEN-LAST:event_leaveSessionActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -148,19 +118,12 @@ public class InitialSetupGUI extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> chooseMap;
     private javax.swing.JLabel chooseMapLabel;
     private javax.swing.JLabel imageBackground;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JButton leaveSession;
-    private javax.swing.JSpinner numberOfPlayers;
-    private javax.swing.JLabel numberOfPlayersLabel;
     private javax.swing.JLabel title1Label;
     private javax.swing.JLabel title2Label;
     private javax.swing.JComboBox<String> typeOfGame;
     private javax.swing.JLabel typeOfGameLabel;
-    private javax.swing.JScrollPane userTable;
     // End of variables declaration//GEN-END:variables
 }

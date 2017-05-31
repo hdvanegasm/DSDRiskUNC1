@@ -29,24 +29,26 @@ public class DSDriskGame extends javax.swing.JFrame {
         title2Label = new javax.swing.JLabel();
         logIn = new javax.swing.JButton();
         createAccount = new javax.swing.JButton();
-        aboutLabel = new javax.swing.JLabel();
         image1 = new javax.swing.JLabel();
+        aboutLabel = new javax.swing.JLabel();
         imageBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("DSDrisk Game");
         setMinimumSize(new java.awt.Dimension(489, 344));
         setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         title1Label.setFont(new java.awt.Font("AR DESTINE", 0, 48)); // NOI18N
         title1Label.setForeground(new java.awt.Color(255, 0, 0));
         title1Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title1Label.setText("DSDRisk Game");
-        getContentPane().add(title1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 78));
+        getContentPane().add(title1Label);
+        title1Label.setBounds(0, 0, 480, 78);
 
         title2Label.setText("What would you like to do?");
-        getContentPane().add(title2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, -1));
+        getContentPane().add(title2Label);
+        title2Label.setBounds(185, 89, 129, 14);
 
         logIn.setText("Log in");
         logIn.addActionListener(new java.awt.event.ActionListener() {
@@ -54,7 +56,8 @@ public class DSDriskGame extends javax.swing.JFrame {
                 logInActionPerformed(evt);
             }
         });
-        getContentPane().add(logIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 120, 40));
+        getContentPane().add(logIn);
+        logIn.setBounds(85, 249, 100, 30);
 
         createAccount.setText("Create account");
         createAccount.addActionListener(new java.awt.event.ActionListener() {
@@ -62,18 +65,22 @@ public class DSDriskGame extends javax.swing.JFrame {
                 createAccountActionPerformed(evt);
             }
         });
-        getContentPane().add(createAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 120, 40));
-
-        aboutLabel.setForeground(new java.awt.Color(0, 0, 204));
-        aboutLabel.setText("About this game");
-        getContentPane().add(aboutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, -1, 10));
+        getContentPane().add(createAccount);
+        createAccount.setBounds(295, 249, 110, 30);
 
         image1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         image1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Warriors.jpg"))); // NOI18N
-        getContentPane().add(image1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 220, 110));
+        getContentPane().add(image1);
+        image1.setBounds(125, 119, 220, 110);
+
+        aboutLabel.setForeground(new java.awt.Color(0, 0, 204));
+        aboutLabel.setText("About this game");
+        getContentPane().add(aboutLabel);
+        aboutLabel.setBounds(200, 280, 78, 10);
 
         imageBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/background.jpg"))); // NOI18N
-        getContentPane().add(imageBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -6, 510, 350));
+        getContentPane().add(imageBackground);
+        imageBackground.setBounds(0, 0, 516, 347);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -90,9 +97,7 @@ public class DSDriskGame extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_createAccountActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String args[]) {
 
         try {
