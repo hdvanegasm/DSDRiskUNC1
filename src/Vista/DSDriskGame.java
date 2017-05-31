@@ -48,7 +48,7 @@ public class DSDriskGame extends javax.swing.JFrame {
 
         title2Label.setText("What would you like to do?");
         getContentPane().add(title2Label);
-        title2Label.setBounds(185, 89, 129, 14);
+        title2Label.setBounds(185, 89, 150, 14);
 
         logIn.setText("Log in");
         logIn.addActionListener(new java.awt.event.ActionListener() {
@@ -66,17 +66,17 @@ public class DSDriskGame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(createAccount);
-        createAccount.setBounds(295, 249, 110, 30);
+        createAccount.setBounds(295, 249, 120, 30);
 
         image1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         image1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Warriors.jpg"))); // NOI18N
         getContentPane().add(image1);
-        image1.setBounds(125, 119, 220, 110);
+        image1.setBounds(140, 120, 220, 110);
 
         aboutLabel.setForeground(new java.awt.Color(0, 0, 204));
         aboutLabel.setText("About this game");
         getContentPane().add(aboutLabel);
-        aboutLabel.setBounds(200, 280, 78, 10);
+        aboutLabel.setBounds(200, 280, 100, 20);
 
         imageBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/background.jpg"))); // NOI18N
         getContentPane().add(imageBackground);

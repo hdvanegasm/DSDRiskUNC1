@@ -39,24 +39,9 @@ public class Account {
         return null;
     }
 
-    public static Account loginAccount(String username, String password, LogInGUI frame) {
+    public static Account loginAccount(String username, String password) {
 
-        JSONObject obj = new org.json.simple.JSONObject();
-
-        obj.put("username", username);
-        obj.put("password", password);
-
-        try {
-            //connection.createConnection(controller.AllServices.logIn, obj);
-
-            return new Account(username, password, "email");
-
-        } catch (Exception e) {
-
-            System.out.println("entro aqui 1");
-            JOptionPane.showConfirmDialog(frame, "The connection has a problem, try again", "Error message", JOptionPane.ERROR_MESSAGE);
-            return null;
-        }
+        return null;
     }
 
     public static boolean logoutAccount() {

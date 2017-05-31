@@ -1,6 +1,6 @@
 package Vista;
 
-import Model.Account;
+import AppAccount.*;
 import Model.User;
 import javax.swing.JOptionPane;
 
@@ -88,7 +88,8 @@ public class LogInGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    //TODO complite login method
     private void enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterActionPerformed
 
         String usernameToLogIn = username.getText();
@@ -96,16 +97,7 @@ public class LogInGUI extends javax.swing.JFrame {
 
         if ((usernameToLogIn.compareTo("") != 0) && (passwordToLogIn.compareTo("") != 0)) {
 
-            /*
-            this.user.account = Account.loginAccount(usernameToLogIn, passwordToLogIn, this);
-            
-            if (this.user.account != null) {
-                this.setVisible(false);
-                new SessionGUI(this.user);
-            }
-
-             */
-            
+            AccountManager.loginAccount();
             
         } else {
 
