@@ -31,25 +31,24 @@ public class CreateAccountGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel4 = new javax.swing.JPanel();
         title1Label = new javax.swing.JLabel();
-        confirm = new javax.swing.JButton();
-        confirmPassword = new javax.swing.JPasswordField();
-        confirmPasswordLabel = new javax.swing.JLabel();
-        password = new javax.swing.JPasswordField();
-        passwordLabel = new javax.swing.JLabel();
-        email = new javax.swing.JTextField();
-        emailLabel = new javax.swing.JLabel();
-        usernameLabel = new javax.swing.JLabel();
-        username = new javax.swing.JTextField();
         title2Label = new javax.swing.JLabel();
-        aboutLabel = new javax.swing.JLabel();
+        confirm = new javax.swing.JButton();
         goBack = new javax.swing.JButton();
+        confirmPassword = new javax.swing.JPasswordField();
+        password = new javax.swing.JPasswordField();
+        username = new javax.swing.JTextField();
+        email = new javax.swing.JTextField();
+        aboutLabel = new javax.swing.JLabel();
+        passwordLabel = new javax.swing.JLabel();
+        usernameLabel = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
+        confirmPasswordLabel = new javax.swing.JLabel();
         imageBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         title1Label.setFont(new java.awt.Font("AR DESTINE", 0, 48)); // NOI18N
         title1Label.setForeground(new java.awt.Color(255, 0, 0));
@@ -57,7 +56,11 @@ public class CreateAccountGUI extends javax.swing.JFrame {
         title1Label.setText("DSDRisk Game");
         title1Label.setMinimumSize(new java.awt.Dimension(100, 55));
         title1Label.setPreferredSize(new java.awt.Dimension(50, 55));
-        jPanel4.add(title1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 369, -1));
+        getContentPane().add(title1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 340, 60));
+
+        title2Label.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        title2Label.setText("Enter correct dates");
+        getContentPane().add(title2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, -1));
 
         confirm.setText("Confirm");
         confirm.addActionListener(new java.awt.event.ActionListener() {
@@ -65,31 +68,7 @@ public class CreateAccountGUI extends javax.swing.JFrame {
                 confirmActionPerformed(evt);
             }
         });
-        jPanel4.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
-        jPanel4.add(confirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 220, -1));
-
-        confirmPasswordLabel.setText("Confirm password");
-        jPanel4.add(confirmPasswordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
-        jPanel4.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 220, -1));
-
-        passwordLabel.setText("Password");
-        jPanel4.add(passwordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
-        jPanel4.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 220, -1));
-
-        emailLabel.setText("Email");
-        jPanel4.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
-
-        usernameLabel.setText("Username");
-        jPanel4.add(usernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
-        jPanel4.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 220, -1));
-
-        title2Label.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        title2Label.setText("Enter correct dates");
-        jPanel4.add(title2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, -1, -1));
-
-        aboutLabel.setForeground(new java.awt.Color(0, 0, 204));
-        aboutLabel.setText("About this game");
-        jPanel4.add(aboutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, -1, -1));
+        getContentPane().add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, -1));
 
         goBack.setText("Go Back");
         goBack.addActionListener(new java.awt.event.ActionListener() {
@@ -97,13 +76,37 @@ public class CreateAccountGUI extends javax.swing.JFrame {
                 goBackActionPerformed(evt);
             }
         });
-        jPanel4.add(goBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, 90, -1));
+        getContentPane().add(goBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 90, -1));
+        getContentPane().add(confirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 220, -1));
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 220, -1));
+
+        username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameActionPerformed(evt);
+            }
+        });
+        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 220, -1));
+        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 220, -1));
+
+        aboutLabel.setForeground(new java.awt.Color(0, 0, 204));
+        aboutLabel.setText("About this game");
+        getContentPane().add(aboutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, -1, -1));
+
+        passwordLabel.setText("Password");
+        getContentPane().add(passwordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+
+        usernameLabel.setText("Username");
+        getContentPane().add(usernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+
+        emailLabel.setText("Email");
+        getContentPane().add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+
+        confirmPasswordLabel.setText("Confirm password");
+        getContentPane().add(confirmPasswordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
 
         imageBackground.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         imageBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/background.jpg"))); // NOI18N
-        jPanel4.add(imageBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 340));
-
-        getContentPane().add(jPanel4, java.awt.BorderLayout.CENTER);
+        getContentPane().add(imageBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -135,6 +138,10 @@ public class CreateAccountGUI extends javax.swing.JFrame {
         DSDriskGame game = new DSDriskGame();
     }//GEN-LAST:event_goBackActionPerformed
 
+    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -148,7 +155,6 @@ public class CreateAccountGUI extends javax.swing.JFrame {
     private javax.swing.JLabel emailLabel;
     private javax.swing.JButton goBack;
     private javax.swing.JLabel imageBackground;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPasswordField password;
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JLabel title1Label;

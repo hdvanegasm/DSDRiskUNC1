@@ -38,7 +38,6 @@ public class InitialSetupHostGUI extends javax.swing.JFrame {
         chooseMapLabel = new javax.swing.JLabel();
         typeOfGame = new javax.swing.JComboBox<>();
         typeOfGameLabel = new javax.swing.JLabel();
-        numberOfPlayersLabel = new javax.swing.JLabel();
         userTable = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -50,14 +49,13 @@ public class InitialSetupHostGUI extends javax.swing.JFrame {
         startSession = new javax.swing.JButton();
         deleteSession = new javax.swing.JButton();
         aboutLabel = new javax.swing.JLabel();
-        numberOfPlayers = new javax.swing.JSpinner();
         imageBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        chooseMap.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(chooseMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 113, 120, -1));
+        chooseMap.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Classic" }));
+        getContentPane().add(chooseMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 113, 130, -1));
 
         title2Label.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         title2Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -75,14 +73,11 @@ public class InitialSetupHostGUI extends javax.swing.JFrame {
         chooseMapLabel.setText("Choose map");
         getContentPane().add(chooseMapLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 116, 90, -1));
 
-        typeOfGame.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(typeOfGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 144, 120, -1));
+        typeOfGame.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "World domination risk", "Secret Mission Risk", "Capital Risk", "Risk for 2 players" }));
+        getContentPane().add(typeOfGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 144, 130, -1));
 
         typeOfGameLabel.setText("Type of game");
         getContentPane().add(typeOfGameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 147, 90, -1));
-
-        numberOfPlayersLabel.setText("Numbers of players");
-        getContentPane().add(numberOfPlayersLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 182, 121, -1));
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
@@ -132,10 +127,10 @@ public class InitialSetupHostGUI extends javax.swing.JFrame {
                 inviteContactActionPerformed(evt);
             }
         });
-        getContentPane().add(inviteContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, -1, -1));
+        getContentPane().add(inviteContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, -1, -1));
 
         startSession.setText("Start session");
-        getContentPane().add(startSession, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, -1, -1));
+        getContentPane().add(startSession, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, -1, -1));
 
         deleteSession.setText("Delete session");
         deleteSession.addActionListener(new java.awt.event.ActionListener() {
@@ -143,15 +138,14 @@ public class InitialSetupHostGUI extends javax.swing.JFrame {
                 deleteSessionActionPerformed(evt);
             }
         });
-        getContentPane().add(deleteSession, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
+        getContentPane().add(deleteSession, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, -1, -1));
 
         aboutLabel.setForeground(new java.awt.Color(0, 0, 204));
         aboutLabel.setText("About this game");
-        getContentPane().add(aboutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, -1, -1));
-        getContentPane().add(numberOfPlayers, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 60, -1));
+        getContentPane().add(aboutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, -1, -1));
 
         imageBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/background700400.jpg"))); // NOI18N
-        getContentPane().add(imageBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -6, 500, 320));
+        getContentPane().add(imageBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -6, 560, 270));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -179,8 +173,6 @@ public class InitialSetupHostGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JSpinner numberOfPlayers;
-    private javax.swing.JLabel numberOfPlayersLabel;
     private javax.swing.JButton startSession;
     private javax.swing.JLabel title1Label;
     private javax.swing.JLabel title2Label;
